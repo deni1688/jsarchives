@@ -1,0 +1,77 @@
+<%- include('_layouts/header') %>
+<div class="col-md-9">
+    <h1> <%= title %> </h1>
+    <% if(typeof cart !== 'undefined'){ %>
+    <table class="table">
+        <thead>
+        <tr>
+            <th class="h6">Image</th>
+            <th class="h6">Title</th>
+            <th class="h6">Price</th>
+            <th class="h6">Quantity</th>
+            <th></th>
+            <th class="h6">Subtotal</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% let total = 0; %>
+        <% cart.forEach(item =>{ %>
+        <tr>
+            <td><img src="<%= item.image  %>" alt="" width="100px"></td>
+            <td><%= item.title %></td>
+            <td>$<%= item.price %></td>
+            <td><%= item.qty %></td>
+            <td>
+                <a href="/cart/update/<%= item.title %>?action=add" class="btn btn-outline-secondary btn-sm"><i
+                        class="fa fa-plus"></i></a>
+                <% if(item.qty != 1) { %>
+                <a href="/cart/update/<%= item.title %>?action=remove" class="btn btn-outline-secondary btn-sm"><i
+                        class="fa fa-minus"></i></a>
+                <% }else{%>
+                <a href="#" class="btn btn-outline-secondary btn-sm disabled"><i class="fa fa-minus"></i></a>
+                <% }%>
+                <a href="/cart/update/<%= item.title %>?action=clear" class="btn btn-outline-danger btn-sm"><i
+                        class="fa fa-trash"></i></a>
+            </td>
+            <% let sub = item.qty * item.price; %>
+            <td>$<%= parseFloat(sub).toFixed(2) %></td>
+            <% total+=sub; %>
+        </tr>
+        <% }) %>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="text-right h6">Your Total:</td>
+            <td class="text-success h6"><strong>$<%= parseFloat(total).toFixed(2) %></strong></td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                <a href="#" class="btn btn-primary btn-md float-right ml-2  checkout"><i class="fa fa-paypal mr-2"></i>Checkout</a>
+                <a href="/cart/clear" class="btn btn-outline-danger btn-md float-right confirmClearCart"><i
+                        class="fa fa-trash mr-2"></i>Clear All</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <form class="pp" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="upload" value="1">
+        <input type="hidden" name="business" value="motus-seller@gmail.com">
+        <% let num = 0 %>
+        <% cart.forEach(item => { %>
+        <% num++ %>
+        <input type="hidden" name="item_name_<%= num %>" value="<%= item.title %>">
+        <input type="hidden" name="amount_<%= num %>" value="<%= item.price %>">
+        <input type="hidden" name="quantity_<%= num %>" value="<%= item.qty %>">
+        <% }) %>
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="amount" value="<%= total %>">
+        <input type="submit" value="PayPal">
+    </form>
+    <% }else{ %>
+    <h2 class="d-block">Your shopping cart is empty, return to <a href="/products">store</a></h2>
+    <% } %>
+</div>
+<%- include('_layouts/footer') %>

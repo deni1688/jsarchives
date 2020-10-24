@@ -1,0 +1,81 @@
+<div class="row">
+  <div class="col-md-12">
+    <a href="#" routerLink="/" class="btn btn-link"><i class="fa fa-arrow-circle-o-left"></i> Back to Dashboard</a>
+  </div>
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">Add Client</div>
+      <div class="card-block">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+          <div class="form-group"><label for="firstName">First Name</label>
+            <input type="text"
+                   class="form-control"
+                   [(ngModel)]="client.firstName"
+                   name="firstName"
+                   #clientFirstName="ngModel"
+                   minlength="2"
+                   required>
+            <p *ngIf="clientFirstName.errors?.required && clientFirstName.touched" class="alert alert-danger mt-2">
+              Please enter a valid first name.
+            </p>
+            <p *ngIf="clientFirstName.errors?.minlength && clientFirstName.touched" class="alert alert-danger mt-2">
+              Fist name must be 2 or more characters.
+            </p>
+          </div>
+          <div class="form-group"><label for="lastName">Last Name</label>
+            <input type="text"
+                   class="form-control"
+                   [(ngModel)]="client.lastName"
+                   name="lastName"
+                   #clientLastName="ngModel"
+                   minlength="2"
+                   required>
+            <p *ngIf="clientLastName.errors?.required && clientLastName.touched" class="alert alert-danger mt-2">
+              Please enter a valid last name.
+            </p>
+            <p *ngIf="clientLastName.errors?.minlength && clientLastName.touched" class="alert alert-danger mt-2">
+              Fist name must be 2 or more characters.
+            </p>
+          </div>
+          <div class="form-group"><label for="email">Email</label>
+            <input type="text"
+                   class="form-control"
+                   [(ngModel)]="client.email"
+                   name="email"
+                   #clientEmail="ngModel"
+                   required>
+            <p *ngIf="clientEmail.errors?.required && clientEmail.touched" class="alert alert-danger mt-2">
+              Please enter a valid email.
+            </p>
+          </div>
+          <div class="form-group"><label for="phone">Phone</label>
+            <input type="text"
+                   class="form-control"
+                   [(ngModel)]="client.phone"
+                   name="phone"
+                   #clientPhone="ngModel"
+                   minlength="9"
+                   required>
+            <p *ngIf="clientPhone.errors?.required && clientPhone.touched" class="alert alert-danger mt-2">
+              Please enter a valid phone number.
+            </p>
+            <p *ngIf="clientPhone.errors?.minlength && clientPhone.touched" class="alert alert-danger mt-2">
+              Fist name must be 2 or more characters.
+            </p>
+          </div>
+          <div class="form-group"><label for="balance">Balance</label>
+            <input type="number"
+                   class="form-control"
+                   [(ngModel)]="client.balance"
+                   name="balance"
+                   #clientBalance="ngModel"
+                   [disabled]="disableBalanceOnAdd">
+          </div>
+          <div class="form-group">
+            <input type="submit" class="btn btn-primary btn-block">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

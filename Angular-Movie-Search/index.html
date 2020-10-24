@@ -1,0 +1,32 @@
+<div id="top" class="container" ng-app="moviesApp" ng-controller="searchMoviesCtrl">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-uppercase text-muted text-center mt-5 mb-1 h3"><span>The Movie DB</span></h1>
+      <h2 class="text-muted text-center mb-5 h6"> &mdash; made with angular &mdash;</h2>
+      <form name="searchForm">
+        <input type="search" class="form-control mt-3" placeholder="search for movies" ng-model="search" />
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-md-4 mt-5 animated slideInUp" ng-repeat="movie in listOfMovies | filter: title | orderBy: '-vote_average' | limitTo:'18'">
+      <div class="card">
+        <img class="img-fluid" ng-src="{{baseUrl + movie.poster_path}}" alt="Movie Cover Not Available" />
+        <div class="card-block">
+          <span class="rating">{{movie.vote_average | number: 1}}</span>
+          <details>
+            <summary class="h5">{{movie.title}}</summary>
+            <p>{{movie.overview}}</p>
+          </details>
+          <span class="rDate"> {{movie.release_date | date:'yyyy' }}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+     <a href="#top" class="fa fa-chevron-circle-up fa-2x mt-5 mb-5"></a>
+    </div>
+  </div>
+</div>

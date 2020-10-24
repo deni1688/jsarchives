@@ -1,0 +1,30 @@
+{
+    "name": "node-express-quickstart",
+    "version": "1.0.0",
+    "description": "A simple build to get started with node, express, and handlebars",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "keywords": [
+        "Node",
+        "Express",
+        "Quickstart"
+    ],
+    "author": "Denis Junuzovic",
+    "license": "MIT",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.18.2",
+        "connect-flash": "^0.1.1",
+        "dateformat": "^3.0.3",
+        "express": "^4.16.2",
+        "express-handlebars": "^3.0.0",
+        "express-session": "^1.15.6",
+        "method-override": "^2.3.10",
+        "mongoose": "^4.12.4",
+        "passport": "^0.4.0",
+        "passport-local": "^1.0.0",
+        "web-push": "^3.3.0"
+    }
+}

@@ -1,0 +1,44 @@
+#app {
+  color: #fff;
+  width: 400px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+#app h1 {
+  background: #fff;
+  color: #67f;
+  padding: 20px;
+  margin-top: -50px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+#app .progress {
+  background: none;
+  border: 1px solid #fff;
+  height: 5px;
+}
+#app .progress .progress-bar {
+  width: 0;
+  -webkit-transition: width .3s linear;
+  transition: width .3s linear;
+  background: #fff;
+}
+#app .btn-custom {
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+}
+#app .btn-custom:hover {
+  color: #67f;
+  background: #fff;
+}
+
+.bg-custom {
+  background: -webkit-linear-gradient(left, #CF30FF 0, #0098F0 100%);
+  background: linear-gradient(90deg, #CF30FF 0, #0098F0 100%);
+  /* FF3.6+ */
+}
+
+@media (max-width: 400px) {
+  #app {
+    width: 100%;
+  }
+}

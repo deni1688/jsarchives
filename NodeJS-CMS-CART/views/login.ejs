@@ -1,0 +1,24 @@
+<%- include('_layouts/header') %>
+<div class="col-md-4  offset-md-4">
+    <div class="card text-center">
+        <div class="card-body">
+            <h1><%= title %></h1>
+            <form action="/users/login" method="POST">
+                <div class="md-form">
+                    <input type="text" name="username" class="form-control">
+                    <label>Username</label>
+                </div>
+
+                <div class="md-form">
+                    <input type="password" name="password" class="form-control">
+                    <label>Password</label>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-success btn-block">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include('_layouts/footer') %>

@@ -1,0 +1,72 @@
+<% include ../partials/head %>
+    <% include ../partials/header %>
+        <main id="main">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-6">
+                        <% include ../partials/errors %>
+                            <div class="card">
+                                <div class="card-body">
+                                    <ul class="nav md-pills nav-justified pills-primary">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#panel1" role="tab">Add Group</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#panel2" role="tab">Add Category</a>
+                                        </li>
+                                    </ul>
+                                    <!-- Tab panels -->
+                                    <div class="tab-content">
+                                        <!--Panel 1-->
+                                        <div class="tab-pane fade in show active" id="panel1" role="tabpanel">
+                                            <form action="/dashboard/add-group" method="POST" enctype="multipart/form-data">
+                                                <div class="form-group">
+                                                    <i class="fa fa-users prefix grey-text"></i>
+                                                    <label>Group Name</label>
+                                                    <input type="text" name="groupName" class="form-control" id="group-name">
+                                                </div>
+                                                <div class="form-group my-4">
+                                                    <select name="groupCategory" class="custom-select d-block my-5" id="group-category">
+                                                <option value="Undefined">Select Category</option>
+                                                <% categories.forEach(cat => { %>
+                                                    <option value="<%= cat.name %>"><%= cat.name %></option>
+                                                <% }); %>
+                                                </select>
+                                                </div>
+                                                <div class="file-field">
+                                                    <div class="btn btn-primary btn-sm">
+                                                        <span>Add Logo</span>
+                                                        <input type="file" id="upload-input" name="groupThumb">
+                                                    </div>
+                                                    <div class="file-path-wrapper">
+                                                        <input class="file-path validate" type="text" id="file-name" name="fileName" placeholder="Upload your file">
+                                                    </div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn-dark btn-block mt-3 add-group">Submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!--/.Panel 1-->
+                                        <!--Panel 2-->
+                                        <div class="tab-pane fade" id="panel2" role="tabpanel">
+                                            <form action="/dashboard/add-category" method="POST">
+                                                <div class="form-group my-4">
+                                                    <i class="fa fa-hashtag prefix grey-text"></i>
+                                                    <label>Category Name</label>
+                                                    <input type="text" name="categoryName" class="form-control" id="group-category">
+                                                </div>
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn-dark btn-block mt-3">Submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!--/.Panel 2-->
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <% include ../partials/footer %>

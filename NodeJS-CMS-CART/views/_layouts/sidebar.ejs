@@ -1,0 +1,14 @@
+<div class="col-sm-12 col-md-3 mt-5">
+    <h4>Categories</h4>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a href="/products">All Products</a>
+        </li>
+        <% categories .forEach(cat=> {%>
+        <li class="list-group-item">
+            <a href="/products/<%= cat.slug %>"><%= cat.title %></a>
+        </li>
+        <% })%>
+    </ul>
+</div>
+</div> 

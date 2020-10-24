@@ -1,0 +1,34 @@
+{
+  "customers": [
+    {
+      "id": "1",
+      "name": "Jordan Krauss",
+      "email": "jordon@email.com",
+      "age": 37
+    },
+    {
+      "id": "2",
+      "name": "Mike Watts",
+      "email": "mike@email.com",
+      "age": 33
+    },
+    {
+      "id": "3",
+      "name": "Jon Snow",
+      "email": "jon@email.com",
+      "age": 28
+    },
+    {
+      "id": "5",
+      "name": "Lauren Rogova",
+      "email": "lauren@email.com",
+      "age": 28
+    },
+    {
+      "name": "Johnathan Klide",
+      "email": "johnathan@email.com",
+      "age": 52,
+      "id": "ORwWMdj"
+    }
+  ]
+}

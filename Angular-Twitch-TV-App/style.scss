@@ -1,0 +1,40 @@
+$myFont: 'Roboto', sans-serif;
+body {
+  font-family: $myFont;
+  background: #eee;
+}
+
+#app {
+  background: #fff;
+}
+
+header {
+  h1 {
+    background: #95d;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 -15px;
+  }
+  .nav-link {
+    color: #888;
+  }
+}
+
+footer {
+    margin: 0 -15px;
+  p {
+    background: #95d;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+
+    a {
+      color: #ff0;
+    }
+  }
+}

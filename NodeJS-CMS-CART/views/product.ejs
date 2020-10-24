@@ -1,0 +1,35 @@
+<%- include('_layouts/header') %>
+<div class="col-md-9">
+
+    <div class="row">
+        <div class="col-md-6">
+            <img src="/product_images/<%= product._id %>/<%= product.image%>" alt="<%= product.title  %> image"
+                 class="featured-product-image">
+            <ul class="custom-list-group">
+                <% galleryImages.forEach(image => { %>
+                <% if(image != 'thumbs') { %>
+                <li>
+                    <a href="/product_images/<%= product._id %>/gallery/<%= image %>" data-fancybox="galley">
+                        <img src="/product_images/<%= product._id %>/gallery/thumbs/<%= image %>"
+                             class="img-thumbnails">
+                    </a>
+                </li>
+                <% } %>
+                <% }) %>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h1><%= title %></h1>
+            <p><%= product.desc %></p>
+            <h3 class="text-success">$<%= parseFloat(product.price).toFixed(2) %></h3>
+            <% if(loggedIn){ %>
+            <a href="/cart/add/<%= product.slug %>" class="btn btn-outline-secondary btn-block"><i
+                    class="fa fa-shopping-cart mr-2"></i> Add to Cart</a>
+            <% }else { %>
+            <p>Login to add to shopping cart</p>
+            <% } %>
+        </div>
+    </div>
+</div>
+<%- include('_layouts/sidebar') %>
+<%- include('_layouts/footer') %>

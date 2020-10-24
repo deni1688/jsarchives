@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body id="wrap">
+
+<%- include('navbar') %>
+<div class="container" id="main">
+    <div class="row  mt-5">
+        <div class="ajaxbg">
+            <div class="ajaxinner">
+                <h3>Your are now being redirected to PayPal</h3>
+                <img src="/images/ajax-loader.gif">
+            </div>
+        </div>
+        <%- messages('messages', locals) %>
+
+        <% if(errors) { %>
+        <div class="col-md-12">
+            <% errors.forEach(error => {%>
+            <div class="alert alert-danger mt-3"> <%= error.msg %></div>
+            <% }) %>
+        </div>
+        <% } %>

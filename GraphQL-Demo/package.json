@@ -1,0 +1,28 @@
+{
+    "name": "graphql-demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "dev:server": "nodemon server.js",
+        "json:server": "json-server --watch data.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/deni1688/GraphQL-Demo.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/deni1688/GraphQL-Demo/issues"
+    },
+    "homepage": "https://github.com/deni1688/GraphQL-Demo#readme",
+    "dependencies": {
+        "axios": "^0.17.1",
+        "express": "^4.16.2",
+        "express-graphql": "^0.6.11",
+        "graphql": "^0.11.7",
+        "json-server": "^0.12.1"
+    }
+}

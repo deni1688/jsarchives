@@ -1,0 +1,8 @@
+<% if(hasErrors) {%>
+    <% lodash.forEach(errors, error => {%>
+        <div class="alert alert-danger text-center mt-2">
+            <a href="#" class="close" data-dismiss="alert" arial-label="close">&times;</a>
+            <%= error %>
+        </div>
+        <% }) %>
+            <% } %>

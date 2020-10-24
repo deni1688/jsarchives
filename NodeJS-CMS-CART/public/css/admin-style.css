@@ -1,0 +1,32 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+#sortable tr:not(.home) {
+    cursor: pointer;
+}
+
+tr.ui-state-highlight {
+    background-color: rgb(250, 250, 250);
+}
+
+#imgPreview {
+    width: 320px;
+}
+
+input[type=file] {
+    border: 0 !important;
+}
+
+.custom-list-group {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.custom-list-group li {
+    display: inline-block;
+    width: auto;
+}

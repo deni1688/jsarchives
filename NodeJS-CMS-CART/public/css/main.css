@@ -1,0 +1,52 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.custom-list-group {
+    list-style: none;
+    margin-right: 0;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: space-around;
+}
+
+.custom-list-group li {
+    padding: 3px;
+}
+
+img.featured-product-image {
+    width: 100%;
+}
+
+.badge-pill {
+    line-height: 1.5;
+    font-size: 10px;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.ajaxbg {
+    display: none;
+}
+
+.pp {
+    position: absolute;
+    left: -1000px;
+}
+
+.alert-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.page-footer,
+.navbar {
+    display: block;
+}

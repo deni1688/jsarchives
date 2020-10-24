@@ -1,0 +1,40 @@
+{{> _navbar }}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3">
+            {{> _sidebar}}
+        </div>
+        <div class="col-md-9">
+            <h1>{{ title }}</h1>
+            <a href="/websites/new" class="btn btn-primary text-center px-3 float-right mb-3"><i class="fa fa-plus mr-2"></i> New Website</a>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Url</th>
+                    <th scope="col">Subscribers</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each websites }}
+                    <tr>
+                        <td>{{math @index "+" 1}}</td>
+                        <td>{{name}}</td>
+                        <td>{{url}}</td>
+                        <td>{{subscribers.length}}</td>
+                        <td class="d-flex">     
+                            <form action="/websites/delete/{{id}}?_method=DELETE" class="form-inline" method="post">
+                                <button type="submit" class="btn btn-danger mr-2 btn-sm btn-block"><i class="fa fa-trash"></i></button>
+                            </form>
+                            <a href="/websites/edit/{{id}}" class="btn btn-warning btn-sm mr-2"><i class="fa fa-edit"></i></a>
+                            <a href="/websites/details/{{id}}" class="btn btn-secondary btn-sm ml"><i class="fa fa-code"></i></a>
+                        </td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

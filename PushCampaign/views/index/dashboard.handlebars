@@ -1,0 +1,59 @@
+{{> _navbar }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            {{> _sidebar}}
+        </div>
+        <div class="col-md-9">
+            <h1>{{ title }}</h1>
+            <div class="row">
+                <div class="col-md-6 mt-4">
+                    <a href="/users" class="link">
+                        <div class="card">
+                            <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa fa-users text-muted" style="font-size: 60px"></i>
+                                <span class="h2">{{userCount}}</span>
+                                <h3 class="mt-2">Total Users</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <a href="/websites" class="link">
+                        <div class="card">
+                            <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa fa-globe text-muted" style="font-size: 60px"></i>
+                                <span class="h2">{{websiteCount}}</span>
+                                <h3 class="mt-2">Total Websites</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <a href="/subscribers" class="link">
+                        <div class="card">
+                            <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa fa-check text-muted" style="font-size: 60px"></i>
+                                <span class="h2">{{subsCount}}</span>
+                                <h3 class="mt-2">Total Subscribers</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <a href="/campaigns" class="link">
+                        <div class="card">
+                            <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                <i class="fa fa-bullhorn text-muted" style="font-size: 60px"></i>
+                                <span class="h2">5</span>
+                                <h3 class="mt-2">Total Campaigns</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="npa-id" data-npa-id="5ac1fe4a85cec74665f89ce0"></div>
+<script src="./js/npaInit.js"></script>

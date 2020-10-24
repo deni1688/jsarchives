@@ -1,0 +1,28 @@
+<%- include('../_layouts/admin_header') %>
+<a href="/admin/categories/add-category" class="btn btn-outline-primary btn-sm float-right mt-5"><i
+        class="fa fa-plus mr-2" aria-hidden="true"></i> New Category</a>
+<div class="clearfix"></div>
+<h1 class="page-title">Categories</h1>
+
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Category</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% categories.forEach( (cat) => { %>
+    <tr>
+        <td> <%= cat.title %></td>
+        <td><a href="/admin/categories/edit-category/<%= cat._id %>" class="btn  btn-outline-success btn-sm"><i
+                class="fa fa-edit" aria-hidden="true"></a></td>
+        <td><a href="/admin/categories/delete-category/<%= cat._id %>"
+               class="btn  btn-outline-danger btn-sm confirmDelete"><i class="fa fa-trash" aria-hidden="true"></a></td>
+    </tr>
+    <% }) %>
+    </tbody>
+</table>
+<%- include('../_layouts/admin_footer') %>

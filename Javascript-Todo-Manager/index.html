@@ -1,0 +1,37 @@
+<div id="info" class="hide">
+  <i id="exitInfo" class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+  <div class="intro">
+    <h2>Hello there...</h2>
+    <p>Welcome to my todo manager. This app allows you to create, edit, update and delete todos. You have four panels into which you can drag your todos depending on which stage they're on. The drag feature is available to desktop only but you can use the little tabs at the bottom of each todo to navigate the todo from one panel to another on mobile and desktop.</p>
+    <p>If this is your first time using this please clear your local storage to make sure that you have access to all of the new features. Besides that if you have any suggestion for how I could improve this go to <a href="http://denisjunuzovic.com/#contact" target="_blank">home page</a> and drop me a line or two.</p>
+  </div>
+  <a href="#" id="clearLS" class="clearStorage">Clear Storage</a>
+</div>
+<div class="addPanel">
+  <h1>TodoManager <i id="infoBtn" class="fa fa-info" aria-hidden="true"></i><small>By Denis Junuzovic </small></h1>
+  <a href="#" id="save"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</a>
+  <a href="#" id="edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a>
+  <a href="#" id="add"><i class="fa fa-plus" aria-hidden="true"></i> Add</a>
+</div>
+<div id="appInner" class="panel">
+  <div class="col one">
+    <div class="label todo"><i class="fa fa-th-list" aria-hidden="true"></i> Todos</div>
+    <div id="todos" class="dataCol">
+    </div>
+  </div>
+  <div class="col two">
+    <div class="label inProgress"><i class="fa fa-clock-o" aria-hidden="true"></i> Doing</div>
+    <div id="progress" class="dataCol">
+    </div>
+  </div>
+  <div class="col three">
+    <div class="label done"><i class="fa fa-eye" aria-hidden="true"></i> Review</div>
+    <div id="review" class="dataCol">
+    </div>
+  </div>
+  <div class="col four">
+    <div class="label review"><i class="fa fa-check-square-o" aria-hidden="true"></i> Done</div>
+    <div id="complete" class="dataCol">
+    </div>
+  </div>
+</div>

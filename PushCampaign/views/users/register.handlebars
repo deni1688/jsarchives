@@ -1,0 +1,26 @@
+{{> _navbar }}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3">
+            {{> _sidebar}}
+        </div>
+        <div class="col-md-9">
+            <h1>{{ title }}</h1>
+            <form method="post" action="/users/register">
+                <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="name" required value="{{name}}">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="email" required value="{{email}}">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control"  placeholder="password" required value="{{password}}">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password2" class="form-control"  placeholder="confirm password" required value="{{password2}}">
+                </div>
+                <input type="submit" value="Register" class="btn btn-primary px-5">
+            </form>
+        </div>
+    </div>
+</div>

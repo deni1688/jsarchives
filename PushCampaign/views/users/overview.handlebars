@@ -1,0 +1,37 @@
+{{> _navbar }}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3">
+            {{> _sidebar}}
+        </div>
+        <div class="col-md-9">
+            <h1>{{ title }}</h1>
+            <a href="/users/new" class="btn btn-primary text-center px-3 float-right mb-3"><i class="fa fa-plus mr-2"></i> New User</a>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each users }}
+                    <tr>
+                        <td>{{math @index "+" 1}}</td>
+                        <td>{{name}}</td>
+                        <td>{{email}}</td>
+                        <td class="d-flex">     
+                            <form action="/users/delete/{{id}}?_method=DELETE" class="form-inline  w-50" method="post">
+                                <button type="submit" class="btn btn-danger mr-1 btn-sm btn-block"><i class="fa fa-trash"></i></button>
+                            </form>
+                            <a href="/users/edit/{{id}}" class="btn btn-warning btn-sm ml-1 w-50"><i class="fa fa-edit"></i></a>
+                        </td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

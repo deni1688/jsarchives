@@ -1,0 +1,59 @@
+<% include ../partials/head %>
+    <% include ../partials/header %>
+        <div class="main mt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1>Current Groups</h1>
+                    </div>
+                    <div class="col-md-4">
+                        <form action="/home" method="GET">
+                            <div class="input-group">
+                                <select name="groupCategory" class="custom-select d-block bg-transparent" id="group-category">
+                                            <option value="All">Filter by Active Categories</option>
+                                                <% categories.forEach(cat => { %>
+                                                    <option value="<%= cat._id %>"> <%= cat._id %> </option>
+                                                <% }); %>
+                                                </select>
+                                <div class="input-group-append">
+                                    <button class="btn btn-dark btn-sm input-group-text" type="submit"><i class="fa fa-filter"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row" id="groups">
+                            <% groups.forEach((group, i) => { %>
+                                <div class="col- col-sm-6 col-md-4 animated fadeInUp" style="animation-delay:<%= i %>00ms">
+                                    <div class="card">
+                                        <div class="bg-wrapper aqua-gradient">
+                                            <div class="bg-img" style="background-image: url( '<%= path %><%= group.logo %>')"></div>
+                                            <a href="/group/<%= group.name %>" class="block-link"></a>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5>
+                                                #
+                                                <%= group.category %>
+                                            </h5>
+                                            <h4 class="card-title mb-0">
+                                                <%= group.name %> <sup>(<%= group.members.length %>)</sup>
+                                                    <a class="btn-floating bg-yellow btn-sm  btn-fav" data-group-name="<%= group.name %>" data-group-id="<%= group._id %>">
+                                                        <i class="fa fa-star"></i>
+                                                    </a>
+                                            </h4>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <% }); %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+        <% include ../partials/footer %>

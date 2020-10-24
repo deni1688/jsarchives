@@ -1,0 +1,24 @@
+{{> _navbar }}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3">
+            {{> _sidebar}}
+        </div>
+        <div class="col-md-9">
+            <h1>{{ title }}</h1>
+            <ol class="list-group">
+                <li class="list-group-item">Download and extract
+                    <a href="/resources/npaScripts.zip">npaScripts.zip</a>
+                </li>
+                <li class="list-group-item">Add npaServiceWorker.js to the root of your website</li>
+                <li class="list-group-item">Link npaInit.js to the page where you want to ask the user for persmission for push notifications</li>
+                <li class="list-group-item">Include the following div in your page:
+                    <br>
+                    <code>  
+                        &lt;div id="npa-id" data-npa-id="{{id}}"&gt;&lt;/div&gt;
+                    </code>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>

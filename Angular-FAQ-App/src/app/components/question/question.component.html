@@ -1,0 +1,12 @@
+<div class="question mt-4 animated flipInX">
+  <div class="card">
+    <div class="card-header">
+      {{question.qu}}
+      <a href="#" class="btn btn-link" (click)="question.hide=!question.hide">Show</a> | 
+      <a href="#" class="btn btn-link " (click)="removeQuestion(question)">Remove</a>  
+    </div>
+    <div class="card-block" [hidden]="question.hide">
+     <p> {{question.an}}</p>
+    </div>
+  </div>
+</div>

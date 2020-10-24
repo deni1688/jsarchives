@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto text-center">
+            {{> _msg }}
+            {{> _errors }}
+            <div class="card">
+                <div class="card-body">
+                    <form method="post" action="/users/login">
+                        <img class="mb-3" src="{{settings.pathToSiteLogo}}" alt="Site Logo" width="200"
+                             height="auto">
+                        <h1 class="h4 my-3">Login to Account</h1>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="password" required>
+                        </div>
+                        <input type="submit" value="Login" class="btn btn-primary btn-block ">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

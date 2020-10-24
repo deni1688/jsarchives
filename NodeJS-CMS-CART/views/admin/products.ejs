@@ -1,0 +1,48 @@
+<%- include('../_layouts/admin_header') %>
+<a href="/admin/products/add-product" class="btn btn-outline-primary btn-sm float-right mt-5"><i class="fa fa-plus mr-2"
+                                                                                                 aria-hidden="true"></i>
+    New Product</a>
+<div class="clearfix"></div>
+<h1 class="page-title">All Products</h1>
+
+<% if(count > 0) { %>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Product Image</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% products.forEach( (product) => { %>
+    <tr id="id_<%= product._id  %>" class="<%= product.slug  %>">
+        <td> <%= product.title %></td>
+        <td> <%= parseFloat(product.price).toFixed(2) %></td>
+        <td> <%= product.category %></td>
+        <td>
+            <% if(product.image == '') { %>
+            <img class="img-thumbnail" src="/images/noimage.png" alt="Product image not available" width="100px"
+                 height="100px">
+            <% } else { %>
+            <img class="img-thumbnail" src="/product_images/<%= product._id %>/<%= product.image %>" alt="Product image"
+                 width="100px" height="100px">
+            <% } %>
+        </td>
+        <td><a href="/admin/products/edit-product/<%= product._id  %>" class="btn  btn-outline-success btn-sm"><i
+                class="fa fa-edit" aria-hidden="true"></a></td>
+        <td><a href="/admin/products/delete-product/<%= product._id %>"
+               class="btn  btn-outline-danger btn-sm confirmDelete"><i class="fa fa-trash" aria-hidden="true"></a></td>
+    </tr>
+    <% }) %>
+    </tbody>
+</table>
+
+<% } else {  %>
+<h3>No products to show at this time. Add one <a href="/admin/products/add-product">here</a></h3>
+<% } %>
+<%- include('../_layouts/admin_footer') %>
