@@ -1,0 +1,42 @@
+{
+    "name": "devconnector",
+    "version": "1.0.0",
+    "description": "Small social network for devs",
+    "main": "server.js",
+    "scripts": {
+        "client-install": "npm install --prefix client",
+        "start": "node server.js",
+        "server": "nodemon server.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\""
+    },
+    "keywords": [
+        "Denis",
+        "Junuzovic"
+    ],
+    "author": "Denis Junuzovic",
+    "license": "MIT",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^1.18.2",
+        "concurrently": "^3.5.1",
+        "express": "^4.16.3",
+        "gravatar": "^1.6.0",
+        "jsonwebtoken": "^8.2.1",
+        "mongoose": "^5.0.17",
+        "passport": "^0.4.0",
+        "passport-jwt": "^4.0.0",
+        "validator": "^10.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^4.19.1",
+        "eslint-config-google": "^0.9.1",
+        "eslint-config-prettier": "^2.9.0",
+        "eslint-config-standard": "^11.0.0",
+        "eslint-plugin-import": "^2.11.0",
+        "eslint-plugin-node": "^6.0.1",
+        "eslint-plugin-promise": "^3.7.0",
+        "eslint-plugin-standard": "^3.1.0",
+        "nodemon": "^1.17.3"
+    }
+}

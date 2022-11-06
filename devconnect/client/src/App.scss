@@ -1,0 +1,148 @@
+img {
+	width: 100%;
+}
+
+.landing {
+	position: relative;
+	background: url("./img/showcase.jpg") no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	margin-top: -24px;
+	margin-bottom: -50px;
+}
+
+.landing-inner {
+	padding-top: 10%;
+}
+
+.dark-overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.card-form {
+	opacity: 0.9;
+}
+
+.latest-profiles-img {
+	width: 40px;
+	height: 40px;
+}
+
+.form-control::placeholder {
+	color: #bbb !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 300;
+}
+
+.badge {
+	border-radius: 30px;
+	padding: 8px 20px;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+.purple-gradient {
+	background: -webkit-linear-gradient(50deg, #ff6ec4, #7873f5) !important;
+	background: -o-linear-gradient(50deg, #ff6ec4, #7873f5) !important;
+	background: linear-gradient(40deg, #ff6ec4, #7873f5) !important;
+}
+
+.peach-gradient {
+	background: -webkit-linear-gradient(50deg, #ffd86f, #fc6262) !important;
+	background: -o-linear-gradient(50deg, #ffd86f, #fc6262) !important;
+	background: linear-gradient(40deg, #ffd86f, #fc6262) !important;
+}
+
+.aqua-gradient {
+	background: -webkit-linear-gradient(50deg, #2096ff, #05ffa3) !important;
+	background: -o-linear-gradient(50deg, #2096ff, #05ffa3) !important;
+	background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
+}
+
+.blue-gradient {
+	background: -webkit-linear-gradient(50deg, #45cafc, #303f9f) !important;
+	background: -o-linear-gradient(50deg, #45cafc, #303f9f) !important;
+	background: linear-gradient(40deg, #45cafc, #303f9f) !important;
+}
+
+.btn.purple-gradient {
+	-webkit-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
+	color: #fff;
+}
+
+.btn.purple-gradient:active,
+.btn.purple-gradient:active:focus .btn.purple-gradient.active,
+.btn.purple-gradient:focus,
+.btn.purple-gradient:hover {
+	background: -webkit-linear-gradient(50deg, #ff88ce, #8f8bf7);
+	background: -o-linear-gradient(50deg, #ff88ce, #8f8bf7);
+	background: linear-gradient(40deg, #ff88ce, #8f8bf7);
+}
+
+.btn.peach-gradient {
+	-webkit-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
+	color: #fff;
+}
+
+.btn.peach-gradient:active,
+.btn.peach-gradient:active:focus .btn.peach-gradient.active,
+.btn.peach-gradient:focus,
+.btn.peach-gradient:hover {
+	background: -webkit-linear-gradient(50deg, #ffdf89, #fc7b7b);
+	background: -o-linear-gradient(50deg, #ffdf89, #fc7b7b);
+	background: linear-gradient(40deg, #ffdf89, #fc7b7b);
+}
+
+.btn.aqua-gradient {
+	-webkit-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
+	color: #fff;
+}
+
+.btn.aqua-gradient:active,
+.btn.aqua-gradient:active:focus .btn.aqua-gradient.active,
+.btn.aqua-gradient:focus,
+.btn.aqua-gradient:hover {
+	background: -webkit-linear-gradient(50deg, #3aa2ff, #1fffac);
+	background: -o-linear-gradient(50deg, #3aa2ff, #1fffac);
+	background: linear-gradient(40deg, #3aa2ff, #1fffac);
+}
+
+.btn.blue-gradient {
+	-webkit-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
+	color: #fff;
+}
+
+.btn.blue-gradient:active,
+.btn.blue-gradient:active:focus .btn.blue-gradient.active,
+.btn.blue-gradient:focus,
+.btn.blue-gradient:hover {
+	background: -webkit-linear-gradient(50deg, #5ed1fc, #3647b3);
+	background: -o-linear-gradient(50deg, #5ed1fc, #3647b3);
+	background: linear-gradient(40deg, #5ed1fc, #3647b3);
+}
+
+.card {
+	border: 0;
+	box-shadow: 0 3px 6px rgba(#000, 0.11);
+}
